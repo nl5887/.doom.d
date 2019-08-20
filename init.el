@@ -184,13 +184,48 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (doom-molokai)))
+ '(ansi-color-names-vector
+   ["#21242b" "#ff6c6b" "#98be65" "#ECBE7B" "#51afef" "#c678dd" "#46D9FF" "#bbc2cf"])
+ '(custom-enabled-themes (quote (doom-challenger-deep)))
  '(custom-safe-themes
    (quote
-    ("64fda2b9cb4660912fe5ea08b6f4450d8c6fc3dbb0452b3342bff9c3f10c5faf" "256bd513a9875cd855077162cdfee8d75b0ad7e18fe8b8cbc10412561fbef892" default)))
- '(flycheck-check-syntax-automatically (quote (save idle-change mode-enabled)))
+    ("39b7ee404ec9bf5bb4da206a33ffbf2321c290417aa7961cb0083de3bd9e8e1a" "8c847a5675ece40017de93045a28ebd9ede7b843469c5dec78988717f943952a" "34c99997eaa73d64b1aaa95caca9f0d64229871c200c5254526d0062f8074693" "ef4edbfc3ec509612f3cf82476beddd2aeb3da7bdc3a35726337a0cc838a4ef4" "e3c87e869f94af65d358aa279945a3daf46f8185f1a5756ca1c90759024593dd" "e838d6375a73fda607820c65eb3ea1f9336be7bd9a5528c9161e10c4aa663b5b" "d0c943c37d6f5450c6823103544e06783204342430a36ac20f6beb5c2a48abe3" "db10381a554231a40b7474eaac28bd58f05067faacce3b25d294bb179a3511a1" "b0fd04a1b4b614840073a82a53e88fe2abc3d731462d6fde4e541807825af342" "9c27124b3a653d43b3ffa088cd092c34f3f82296cf0d5d4f719c0c0817e1afa6" "f8c30fa07ba7e8fe884f22b428dae6724955fa61ad84a658c3b0164ae391fb52" "155a5de9192c2f6d53efcc9c554892a0d87d87f99ad8cc14b330f4f4be204445" "ab9456aaeab81ba46a815c00930345ada223e1e7c7ab839659b382b52437b9ea" "868abc288f3afe212a70d24de2e156180e97c67ca2e86ba0f2bf9a18c9672f07" "4e132458143b6bab453e812f03208075189deca7ad5954a4abb27d5afce10a9a" "b428f19642f3f0da0e3c2805402d86ec31e0bfd5008ddba3928bf8975f1c76aa" "64fda2b9cb4660912fe5ea08b6f4450d8c6fc3dbb0452b3342bff9c3f10c5faf" "256bd513a9875cd855077162cdfee8d75b0ad7e18fe8b8cbc10412561fbef892" default)))
+ '(doom-modeline-lsp t)
+ '(doom-modeline-persp-name t)
+ '(doom-modeline-persp-name-icon t)
+ '(fci-rule-color "#5B6268")
+ '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(gofmt-command "goimports")
- '(lsp-clients-go-server "gopls"))
+ '(jdee-db-active-breakpoint-face-colors (cons "#1B2229" "#51afef"))
+ '(jdee-db-requested-breakpoint-face-colors (cons "#1B2229" "#98be65"))
+ '(jdee-db-spec-breakpoint-face-colors (cons "#1B2229" "#3f444a"))
+ '(lsp-clients-go-server "gopls")
+ '(objed-cursor-color "#ff6c6b")
+ '(persp-mode t)
+ '(vc-annotate-background "#282c34")
+ '(vc-annotate-color-map
+   (list
+    (cons 20 "#98be65")
+    (cons 40 "#b4be6c")
+    (cons 60 "#d0be73")
+    (cons 80 "#ECBE7B")
+    (cons 100 "#e6ab6a")
+    (cons 120 "#e09859")
+    (cons 140 "#da8548")
+    (cons 160 "#d38079")
+    (cons 180 "#cc7cab")
+    (cons 200 "#c678dd")
+    (cons 220 "#d974b7")
+    (cons 240 "#ec7091")
+    (cons 260 "#ff6c6b")
+    (cons 280 "#cf6162")
+    (cons 300 "#9f585a")
+    (cons 320 "#6f4e52")
+    (cons 340 "#5B6268")
+    (cons 360 "#5B6268")))
+ '(vc-annotate-very-old-color nil)
+ '(which-func-non-auto-modes (quote (go)))
+ '(which-function-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

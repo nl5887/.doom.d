@@ -7,3 +7,5 @@
 ;; (package! builtin-package :disable t)
 (package! helm-swoop)
 (package! company-tabnine)
+(package! helm-lsp)
+(package! company-box)

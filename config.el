@@ -38,8 +38,9 @@
       ))
   )
 
-(add-hook 'flycheck-after-syntax-check-hook #'flycheck-list-errors-only-when-errors)
-;; (add-hook 'before-save-hook #'flycheck-list-errors-only-when-errors)
+;; (add-hook 'flycheck-after-syntax-check-hook #'flycheck-list-errors-only-when-errors)
+(add-hook 'before-save-hook #'flycheck-list-errors-only-when-errors)
+
 
 (after! flycheck
    (set-popup-rules!
@@ -48,3 +49,30 @@
       )
   )
 )
+
+(after! company-box
+  (add-hook 'company-mode-hook 'company-box-mode)
+)
+
+;; disable evil escape (jk) in text mode
+;; (add-to-list 'evil-mc-incompatible-minor-modes 'evil-escape-mode nil #'eq)
+;;
+;; (after! evil-escape
+;;   (evil-escape-mode nil)
+;; )
+
+(after! evil-escape (add-to-list 'evil-escape-excluded-major-modes 'text-mode))
+
+;; Go
+(defun cfg-go-mode-hook ()
+  "Hook for go mode"
+  (add-hook 'before-save-hook 'gofmt-before-save) ;; format before saving
+
+  (which-func-mode 't)
+
+  ;; compile & run (SPC c c)
+  (if (not (string-match "go" compile-command))
+      (set (make-local-variable 'compile-command)
+           "go build -v && go test -v && go vet"))
+)
+(add-hook 'go-mode-hook 'cfg-go-mode-hook)
